@@ -11,12 +11,12 @@
 //分数 SCORE
 void drawScore()
 {
-    setfillcolor(RGB(187, 173, 160));
-    solidroundrect(240, 20, 450, 80, 5, 5);
+    setfillcolor(RGB(187, 173, 160));// 设置填充颜色
+    solidroundrect(240, 20, 450, 80, 5, 5);// 输出圆角矩形
 
-    settextstyle(30, 0, "Arial");
-    settextcolor(RGB(236, 228, 218));
-    setbkmode(TRANSPARENT);
+    settextstyle(30, 0, "Arial");// 设置字体样式
+    settextcolor(RGB(236, 228, 218));// 设置字体颜色
+    setbkmode(TRANSPARENT);// 设置字体背景透明
     char str1[20] = "SCORE   ";
     int tlen = textwidth(str1);
     int thei = textheight(str1);
