@@ -21,46 +21,23 @@ int main()
     while (true)
     {
         char sign = _getch();
-        if (sign == 0xE0 || sign == 0 || sign == -32)
+        switch (sign) 
         {
+        case 0xE0: case 0: case -32:
             sign = _getch();
-            switch (sign)
+        default:
+            switch (sign) 
             {
-            case 'H':
+            case 'H': case 'W': case 'w':
                 moveUp();
                 break;
-            case 'P':
+            case 'P': case 'S': case 's':
                 moveDown();
                 break;
-            case 'K':
+            case 'K': case 'A': case 'a':
                 moveLeft();
                 break;
-            case 'M':
-                moveRight();
-                break;
-            default:
-                //cout << "Invalid key!" << endl;
-                break;
-            }
-        }
-        else
-        {
-            switch (sign)
-            {
-            case 'W':
-            case 'w':
-                moveUp();
-                break;
-            case 'S':
-            case 's':
-                moveDown();
-                break;
-            case 'A':
-            case 'a':
-                moveLeft();
-                break;
-            case 'D':
-            case 'd':
+            case 'M': case 'D': case 'd':
                 moveRight();
                 break;
             default:
